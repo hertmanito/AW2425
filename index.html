@@ -9,15 +9,30 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="homepage.html" method="post">
+        <form action="homepage.html" method="post" onsubmit="return validateForm()">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="terms.html" target="_blank">terms and conditions</a></label>
+            </div>
+            
             <button type="submit">Login</button>
         </form>
     </div>
+    <script>
+        function validateForm() {
+            var terms = document.getElementById('terms');
+            if (!terms.checked) {
+                alert('You must agree to the terms and conditions to proceed.');
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
