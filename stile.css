@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #e6d7a8;
     color: #333;
 }
 
@@ -31,12 +31,61 @@ main {
     text-align: center;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
+h1{
+    font-size: 2em;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    position: relative;
+    color: gray;
+}
+
+li a {
+    display: block;
+    color: #333;
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: black;
+}
+
+li ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the dropdown below the list item */
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px; /* Ensure the dropdown is wide enough */
+}
+
+li:hover > ul {
+    display: block;
+}
+
+li ul li {
+    float: none;
+    display: block; /* Ensure each list item takes up its own line */
+}
+
+li ul li a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
